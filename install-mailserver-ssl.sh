@@ -5,7 +5,7 @@ sudo apt update && sudo apt upgrade -y
 
 echo "=== SET HOSTNAME ==="
 sudo hostnamectl set-hostname mailserver.local
-echo "192.168.1.67 mailserver.local mailserver" | sudo tee -a /etc/hosts
+echo "(ip) (domain) mailserver" | sudo tee -a /etc/hosts
 
 echo "=== INSTALL POSTFIX ==="
 echo "postfix postfix/mailname string mailserver.local" | sudo debconf-set-selections
